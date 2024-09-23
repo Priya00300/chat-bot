@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    color: white;
+    font-size: 44px;
+}
+
+.try-btn {
+    background-color: #bc74f3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 50px;
+}
+
+.greeting h2 {
+    margin-top: 100px;
+    font-size: 60px;
+    color: #ddd;
+}
+
+.greeting .name {
+    color: #bc74f3;
+}
+
+.greeting p {
+    font-size: 24px;
+    color: #777;
+}
+
+.options {
+    display: flex;
+    justify-content: space-evenly;
+    height: 200px;
+    margin-top: 20%;
+}
+
+.card {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 220px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    position: relative;
+}
+
+.card p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.icon {
+    font-size: 40px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.footer {
+    margin: 30px 0;
+    color: #aaa;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.footer button {
+    background-color: transparent;
+    border: none;
+    color: #3498db;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.input-container {
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    position: fixed; 
+    bottom: 0;
+    width: 1200px;
+    padding: 20px;
+    
+    
+
+}
+
+
+.input-container input {
+    width: 60%;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #333;
+    height: 70px;
+}
+
+.input-container button {
+    background-color: #bc74f3;
+    color: white;
+    border: none;
+    padding:10px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    height: 70px;
+    width: 70px;
+}
+.disclamer{
+    margin-top: 25px;
+    color: #777;
+    justify-content: bottom;
+    align-items: bottom;
+}
+.title1{
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+}
+.options {
+    display: none;
+}
+.greeting{
+    display: none;
+}
+.footer{
+    display: none;
+}
+.chatlist {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-outgoing, .message-incoming  , .chatlist{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.message-outgoing .message-content,
+.message-incoming .message-content  {
+    display: flex;
+    align-items: center;
+}
+
+
+.message-content .avatar{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.message-outgoing .text, 
+.message-incoming .text,.chatlist {
+    padding: 20px;
+    
+    max-width: 900px;
+    text-align: left;
+    font-size: 20px;
+   
+}
+
+
+p.text {
+    margin: 10px;
+}
+
+.message-content  {
+    margin-top: 50px;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+}
+
+.chatlist {
+    position: relative;
+  
+}
+.message-content {
+    display: flex;
+    align-items: center; /* Aligns avatar and text on the same row */
+    flex-direction: row; /* Ensures horizontal alignment */
+    justify-content: flex-start;
+}
+
+.message-outgoing .text, 
+.message-incoming .text {
+    padding: 10px 20px; /* Adjusting padding */
+    max-width: 800px;
+    text-align: left;
+    font-size: 20px;
+    margin: 0;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    flex-shrink: 0; /* Ensures avatar remains its size and doesn't shrink */
+}
+.chatlist .loading-indicator{
+    display: flex;
+    width: 100%;
+    gap:0.8rem;
+    flex-direction: column;
+}
+.chatlist .loading-indicator .loading-bar{
+    height: 11px;
+    width: 100%;
+    border-radius: 0.14rem;
+    background: linear-gradient(to right,#4285f4,var(--primary-colour),#4285f4);
+    animation: animate 3s linear infinite;
+}
+.chatlist .loading-indicator .loading-bar:last-child{
+    width: 70%;
+}
+
+@keyframes animate {
+    0% {
+        background-position: -800px 0;
+    }
+    100% {
+        background-position: 800px 0;
+    }
+}
